@@ -1,0 +1,254 @@
+    1  ls /boot
+    2  yum provides /boot/vmlinuz-3.10.0-229.el7.x86_64 
+    3  yum provides /boot/vmlinuz-3.10.0-229.14.1.el7.x86_64 
+    4  yum search kernel 
+    5  yum search kernel | egrep '^kernel'
+    6  yum install kernel
+    7  yum provides /boot/vmlinuz-3.10.0-229.el7.x86_64 
+    8  yum erase kernel-3.10.0-229.el7.x86_64
+    9  yum install kernel
+   10  ls /boot
+   11  cat /proc/partitions 
+   12  mount -t iso9660 /dev/sr0 /mnt -o ro
+   13  ls /mnt
+   14  /mnt/runasroot.sh 
+   15  /mnt/autorun.sh 
+   16  find /mnt |7 grep rpm
+   17  find /mnt | grep rpm
+   18  /mnt/VBoxLinuxAdditions.run 
+   19  yum install bzip2
+   20  /mnt/VBoxLinuxAdditions.run 
+   21  yum search vbox
+   22  yum search guest
+   23  yum search guest | less
+   24  /mnt/VBoxLinuxAdditions.run 
+   25  yum install kernel-devel
+   26  /mnt/VBoxLinuxAdditions.run 
+   27  which gcc
+   28  yum search build
+   29  yum groupinstall 'Development Tools'
+   30  /mnt/VBoxLinuxAdditions.run 
+   31  poweroff
+   32  vi /etc/sysconfig/network
+   33  vi /etc/sysconfig/network-scripts/ifcfg-enp0s3 
+   34  vi /etc/hostname 
+   35  vi /etc/hosts
+   36  cat /etc/hostname
+   37  vi /etc/hosts
+   38  vi /etc/sysconfig/network
+   39  service network restart
+   40  vi /etc/resolv.conf
+   41  hostname
+   42  cat /etc/hostname
+   43  hostname vm11.vtiteam.prokarma.com
+   44  ping $(hostname)
+   45  ping google.com
+   46  vi /etc/resolv.conf
+   47  ping 192.168.10.1
+   48  ssh 192.168.10.1
+   49  route -n
+   50  ifconfig
+   51  ip addr
+   52  ip route
+   53  exit
+   54  poweroff
+   55  ifconfig
+   56  ip link
+   57  ip route
+   58  ip addr
+   59  ping 192.168.10.1
+   60  poweroff
+   61  ping 192.168.10.1
+   62  ifconfig
+   63  ip link
+   64  ip addr
+   65  ping 192.168.10.11
+   66  ping 192.168.10.1
+   67  ssh 192.168.10.1
+   68  nmap -P0 192.168.10.1
+   69  poweroff
+   70  ping 192.168.10.1
+   71  ssh 192.168.10.1
+   72  ssh bobvin@192.168.10.1
+   73  ping 8.8.8.8
+   74  route -n
+   75  ip route
+   76  ping google.com
+   77  cat /etc/resolv.conf
+   78  host google.com
+   79  ping google.com
+   80  exit
+   81  poweroff
+   82  ip config
+   83  ip link
+   84  ip addr
+   85  cd /etc/sysconfig/
+   86  ls
+   87  cd network
+   88  cd network-scripts/
+   89  ls
+   90  mv ifcfg-enp0s3 ifcfg-eth0
+   91  vi ifcfg-eth0 
+   92  ls
+   93  cd ..
+   94  vi network
+   95  poweroff
+   96  ip addr
+   97  ping 192.168.56.1
+   98  ps | grep ssh
+   99  yum search openssh
+  100  yum install openssh-server
+  101  exit
+  102  ping 192.168.56.1
+  103  ssh bobvin@192.168.56.1
+  104  lynx http://www.google.com/
+  105  curl -vv http://www.google.com/
+  106  ping 74.125.21.100
+  107  ping pillars.net
+  108  ssh root@192.241.223.239
+  109  curl -vvv http://cox.com/
+  110  ping cox.com
+  111  cat /etc/resolv.conf
+  112  vi /etc/resolv.conf
+  113  ping cox.com
+  114  curl -vvv http://cox.com/
+  115  yum install openssh-server
+  116  exit
+  117  poweroff
+  118  exit
+  119  ls -lte
+  120  ls -ltr
+  121  yum
+  122  java
+  123  javac
+  124  yum install JDK
+  125  yum install Java
+  126  yum install jdk1.8
+  127  cd opt
+  128  cd /opt/
+  129  ls
+  130  # wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz"
+  131   wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz"
+  132  yum install wget
+  133   wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz"
+  134  tar xzf jdk-8u60-linux-x64.tar.gz
+  135  ls
+  136  cd jdk1.8.0_60/
+  137  ls
+  138  alternatives --install /usr/bin/java java /opt/jdk1.8.0_60/bin/java 2
+  139  alternatives --config java
+  140  java
+  141  javac
+  142  clr
+  143  clear
+  144  alternatives --config javaalternatives --install /usr/bin/jar jar /opt/jdk1.8.0_60/bin/jar 2
+  145  exit
+  146  cd /opt/
+  147  ls
+  148  cd jdk1.8.0_60/
+  149  yum search jdk
+  150  yum install java-1.6.0-openjdk.x86_64 
+  151  javac
+  152  path
+  153  cd /opt/
+  154  ls
+  155  cd /
+  156  ls
+  157  cd etc/
+  158  ls
+  159  cd java/
+  160  ls
+  161  ls ja*
+  162  cd //
+  163  cd /
+  164  ls
+  165  cd /etc/
+  166  ls
+  167  ls ja*
+  168  java 
+  169  javac
+  170  cd /
+  171  updatedb 
+  172  updatedb
+  173  clear
+  174  history
+  175  find / javac
+  176  find . -name "javac"
+  177  alternatives --set javac ./opt/jdk1.8.0_60/bin/javac
+  178  export JAVA_HOME=./opt/jdk1.8.0_60/bin/javac
+  179  javac
+  180  $PATH
+  181  /
+  182  PATH
+  183  %PATH%
+  184  export PATH=$PATH:./opt/jdk1.8.0_60/bin:./opt/jdk1.8.0_60/jre/bin
+  185  path
+  186  PATH
+  187  $PATH
+  188  javac
+  189  javac -version
+  190  java -version
+  191  yum search jenkins
+  192  history
+  193  yum search jenkins
+  194  apt-get
+  195  wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+  196  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+  197  yum install jenkins
+  198  service jenkins
+  199  service jenkins start
+  200  clear
+  201  service jenkins start
+  202  clear
+  203  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+  204  service jenkins start/stop/restart
+  205  sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+  206  yum install jenkins
+  207  service jenkins start
+  208  who
+  209  whoiam
+  210  ipconfig
+  211  who
+  212  ls -ltr
+  213  yum search git
+  214  yum install emacs-git.noarch
+  215  ls
+  216  git
+  217  yum search puppet
+  218  yum install puppet-agent.x86_64
+  219  puppet
+  220  puppet-agent
+  221  yum search soapui
+  222  puppetlabs
+  223  yum install mlocate
+  224  updatedb
+  225  locate bin/puppet
+  226  history
+  227   export PATH=$PATH:/opt/puppetlabs/puppet/bin/puppet
+  228  puppet
+  229  path
+  230  $PATH
+  231   export PATH=$PATH:/opt/puppetlabs/puppet/bin/
+  232  puppet
+  233  puppet help
+  234  puppet status
+  235  yum install puppetlint
+  236  yum search puppetlint
+  237  yum search puppet-lint
+  238  yum search puppet
+  239    parser            Interact directly with the parser.
+  240   gem install puppet-lint
+  241  gem install fpm
+  242  puppet
+  243  clear
+  244  mlocate puppet.conf
+  245  locate puppet.conf
+  246  vi /etc/puppetlabs/puppet/puppet.conf
+  247  locate javac
+  248  history
+  249  history>mycommands-09/23
+  250  history>touch mycommands-09/23
+  251  ls
+  252  touch commands.09.23
+  253  ls
+  254  history> commands.09.23

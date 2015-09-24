@@ -1,0 +1,322 @@
+    1  ls /boot
+    2  yum provides /boot/vmlinuz-3.10.0-229.el7.x86_64 
+    3  yum provides /boot/vmlinuz-3.10.0-229.14.1.el7.x86_64 
+    4  yum search kernel 
+    5  yum search kernel | egrep '^kernel'
+    6  yum install kernel
+    7  yum provides /boot/vmlinuz-3.10.0-229.el7.x86_64 
+    8  yum erase kernel-3.10.0-229.el7.x86_64
+    9  yum install kernel
+   10  ls /boot
+   11  cat /proc/partitions 
+   12  mount -t iso9660 /dev/sr0 /mnt -o ro
+   13  ls /mnt
+   14  /mnt/runasroot.sh 
+   15  /mnt/autorun.sh 
+   16  find /mnt |7 grep rpm
+   17  find /mnt | grep rpm
+   18  /mnt/VBoxLinuxAdditions.run 
+   19  yum install bzip2
+   20  /mnt/VBoxLinuxAdditions.run 
+   21  yum search vbox
+   22  yum search guest
+   23  yum search guest | less
+   24  /mnt/VBoxLinuxAdditions.run 
+   25  yum install kernel-devel
+   26  /mnt/VBoxLinuxAdditions.run 
+   27  which gcc
+   28  yum search build
+   29  yum groupinstall 'Development Tools'
+   30  /mnt/VBoxLinuxAdditions.run 
+   31  poweroff
+   32  vi /etc/sysconfig/network
+   33  vi /etc/sysconfig/network-scripts/ifcfg-enp0s3 
+   34  vi /etc/hostname 
+   35  vi /etc/hosts
+   36  cat /etc/hostname
+   37  vi /etc/hosts
+   38  vi /etc/sysconfig/network
+   39  service network restart
+   40  vi /etc/resolv.conf
+   41  hostname
+   42  cat /etc/hostname
+   43  hostname vm11.vtiteam.prokarma.com
+   44  ping $(hostname)
+   45  ping google.com
+   46  vi /etc/resolv.conf
+   47  ping 192.168.10.1
+   48  ssh 192.168.10.1
+   49  route -n
+   50  ifconfig
+   51  ip addr
+   52  ip route
+   53  exit
+   54  poweroff
+   55  ifconfig
+   56  ip link
+   57  ip route
+   58  ip addr
+   59  ping 192.168.10.1
+   60  poweroff
+   61  ping 192.168.10.1
+   62  ifconfig
+   63  ip link
+   64  ip addr
+   65  ping 192.168.10.11
+   66  ping 192.168.10.1
+   67  ssh 192.168.10.1
+   68  nmap -P0 192.168.10.1
+   69  poweroff
+   70  ping 192.168.10.1
+   71  ssh 192.168.10.1
+   72  ssh bobvin@192.168.10.1
+   73  ping 8.8.8.8
+   74  route -n
+   75  ip route
+   76  ping google.com
+   77  cat /etc/resolv.conf
+   78  host google.com
+   79  ping google.com
+   80  exit
+   81  poweroff
+   82  ip config
+   83  ip link
+   84  ip addr
+   85  cd /etc/sysconfig/
+   86  ls
+   87  cd network
+   88  cd network-scripts/
+   89  ls
+   90  mv ifcfg-enp0s3 ifcfg-eth0
+   91  vi ifcfg-eth0 
+   92  ls
+   93  cd ..
+   94  vi network
+   95  poweroff
+   96  ip addr
+   97  ping 192.168.56.1
+   98  ps | grep ssh
+   99  yum search openssh
+  100  yum install openssh-server
+  101  exit
+  102  ping 192.168.56.1
+  103  ssh bobvin@192.168.56.1
+  104  lynx http://www.google.com/
+  105  curl -vv http://www.google.com/
+  106  ping 74.125.21.100
+  107  ping pillars.net
+  108  ssh root@192.241.223.239
+  109  curl -vvv http://cox.com/
+  110  ping cox.com
+  111  cat /etc/resolv.conf
+  112  vi /etc/resolv.conf
+  113  ping cox.com
+  114  curl -vvv http://cox.com/
+  115  yum install openssh-server
+  116  exit
+  117  poweroff
+  118  exit
+  119  ls -lte
+  120  ls -ltr
+  121  yum
+  122  java
+  123  javac
+  124  yum install JDK
+  125  yum install Java
+  126  yum install jdk1.8
+  127  cd opt
+  128  cd /opt/
+  129  ls
+  130  # wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz"
+  131   wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz"
+  132  yum install wget
+  133   wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u60-b27/jdk-8u60-linux-x64.tar.gz"
+  134  tar xzf jdk-8u60-linux-x64.tar.gz
+  135  ls
+  136  cd jdk1.8.0_60/
+  137  ls
+  138  alternatives --install /usr/bin/java java /opt/jdk1.8.0_60/bin/java 2
+  139  alternatives --config java
+  140  java
+  141  javac
+  142  clr
+  143  clear
+  144  alternatives --config javaalternatives --install /usr/bin/jar jar /opt/jdk1.8.0_60/bin/jar 2
+  145  exit
+  146  ls
+  147  cd 
+  148  exit
+  149  df -h
+  150  cat /proc/swaps
+  151  top
+  152  exit
+  153  cd /opt/
+  154  ls
+  155  cd jdk1.8.0_60/
+  156  yum search jdk
+  157  yum install java-1.6.0-openjdk.x86_64 
+  158  javac
+  159  path
+  160  cd /opt/
+  161  ls
+  162  cd /
+  163  ls
+  164  cd etc/
+  165  ls
+  166  cd java/
+  167  ls
+  168  ls ja*
+  169  cd //
+  170  cd /
+  171  ls
+  172  cd /etc/
+  173  ls
+  174  ls ja*
+  175  java 
+  176  javac
+  177  cd /
+  178  updatedb 
+  179  updatedb
+  180  clear
+  181  history
+  182  find / javac
+  183  find . -name "javac"
+  184  alternatives --set javac ./opt/jdk1.8.0_60/bin/javac
+  185  export JAVA_HOME=./opt/jdk1.8.0_60/bin/javac
+  186  javac
+  187  $PATH
+  188  /
+  189  PATH
+  190  %PATH%
+  191  export PATH=$PATH:./opt/jdk1.8.0_60/bin:./opt/jdk1.8.0_60/jre/bin
+  192  path
+  193  PATH
+  194  $PATH
+  195  javac
+  196  javac -version
+  197  java -version
+  198  yum search jenkins
+  199  history
+  200  yum search jenkins
+  201  apt-get
+  202  wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+  203  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+  204  yum install jenkins
+  205  service jenkins
+  206  service jenkins start
+  207  clear
+  208  service jenkins start
+  209  clear
+  210  sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+  211  service jenkins start/stop/restart
+  212  sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+  213  yum install jenkins
+  214  service jenkins start
+  215  who
+  216  whoiam
+  217  ipconfig
+  218  who
+  219  ls -ltr
+  220  yum search git
+  221  yum install emacs-git.noarch
+  222  ls
+  223  git
+  224  yum search puppet
+  225  yum install puppet-agent.x86_64
+  226  puppet
+  227  puppet-agent
+  228  yum search soapui
+  229  puppetlabs
+  230  yum install mlocate
+  231  updatedb
+  232  locate bin/puppet
+  233  history
+  234   export PATH=$PATH:/opt/puppetlabs/puppet/bin/puppet
+  235  puppet
+  236  path
+  237  $PATH
+  238   export PATH=$PATH:/opt/puppetlabs/puppet/bin/
+  239  puppet
+  240  puppet help
+  241  puppet status
+  242  yum install puppetlint
+  243  yum search puppetlint
+  244  yum search puppet-lint
+  245  yum search puppet
+  246    parser            Interact directly with the parser.
+  247   gem install puppet-lint
+  248  gem install fpm
+  249  puppet
+  250  clear
+  251  mlocate puppet.conf
+  252  locate puppet.conf
+  253  vi /etc/puppetlabs/puppet/puppet.conf
+  254  locate javac
+  255  history
+  256  history>mycommands-09/23
+  257  history>touch mycommands-09/23
+  258  ls
+  259  touch commands.09.23
+  260  ls
+  261  history> commands.09.23
+  262  cat commands.09.23 
+  263  history
+  264   cd /var/lib/jenkins/plugins/
+  265  ls
+  266  curl http://updates.jenkins-ci.org/latest/dynamicparameter.hpi
+  267  curl -O  http://updates.jenkins-ci.org/latest/dynamicparameter.hpi
+  268  ls
+  269  curl http://localhost:8080/reload
+  270  curl -X POST http://localhost:8080/reload
+  271  curl -O  http://updates.jenkins-ci.org/latest/extended-choice-parameter.hpi
+  272  curl -O  http://updates.jenkins-ci.org/latest/extensible-choice-parameter.hpi
+  273  curl -X POST http://localhost:8080/reload
+  274  service jenkins stop
+  275  service jenkins start
+  276  ls
+  277  ls -ltr
+  278  ls -ltr *D
+  279  ls *D
+  280  ls -ltr D*
+  281  ls D8
+  282  ls D*
+  283  ls
+  284  ls -ltr
+  285  ls
+  286  ls d*
+  287  rm d*
+  288  curl -O  http://updates.jenkins-ci.org/latest/dynamicparameter.hpi
+  289  ls d*
+  290  pwd
+  291  service jenkins restart
+  292  Y
+  293  ls d*
+  294  ls 
+  295  locate jenkins
+  296  cd /var/lib/jenkins/
+  297  ls
+  298  cd plugins/
+  299  ls
+  300  service jenkins stop
+  301  service jenkins start
+  302  curl 
+  303  ls
+  304  mv dynamicparameter.hpi dynamicparameter.jpi
+  305  ls
+  306  history
+  307  service jenkins restart
+  308  ls -lte
+  309  ls -ltr
+  310  ls d*
+  311  ls
+  312  ls *.jpi
+  313  ls *.hpi
+  314  ls *.jpi
+  315  ls *.hpi
+  316  ls 
+  317  curl -O  http://updates.jenkins-ci.org/latest/embeddable-build-status.hpi
+  318  history
+  319  cd /
+  320  ls -ltr
+  321  touch commands.09.24
+  322  history > commands.09.24
